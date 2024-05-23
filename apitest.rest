@@ -1,0 +1,75 @@
+@server=http://localhost:4890
+
+### Hello API
+GET {{server}}/hello?name=Matt&city=Vancouver&age=24
+
+### Jokes API
+GET {{server}}/jokes?category=all
+
+### First Post API
+POST {{server}}/login
+Content-Type: application/json
+
+{
+    "data":
+    {
+        "username": "j@j.com",
+        "password": "abc123"
+    }
+}
+
+### Login GET request
+GET {{server}}/login?username=j@j.com&password=abc123
+
+###
+GET {{server}}/students
+
+###
+GET {{server}}/students/inperson
+
+###
+GET {{server}}/students/10
+
+###
+GET {{server}}/jokes1
+
+###
+PUT {{server}}/jokes
+Content-Type: application/json
+
+{
+    "data":
+    {
+        "jokeid": 1,
+        "joke": "This is an updated joke"
+    }
+}
+
+###
+PUT {{server}}/jokesURL?id=1&joke=This is a joke of the century
+
+###
+PUT {{server}}/jokesparam/100/this is a joke from the paramater
+
+###
+PUT {{server}}/jokesnew/1
+Content-Type: application/json
+
+{
+    "data":
+    {
+        "joke": "This is a joke from a combination of param and body"
+    }
+}
+
+###
+GET {{server}}/students1
+Content-Type: application/json
+
+{
+    "data"
+    {
+        "id": 1,
+        "name": "matthew"
+    }
+}
